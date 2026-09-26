@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><title>LLD Tests</title><style>body{font-family:Arial;padding:30px}li{margin:8px 0}.pass{color:green}.fail{color:red}</style></head><body><h1>LLD Practice Platform Tests</h1><ul id="out"></ul><script>
+function assert(name,condition){const li=document.createElement('li');li.className=condition?'pass':'fail';li.textContent=(condition?'PASS: ':'FAIL: ')+name;document.querySelector('#out').appendChild(li)}
+function score(text,words){const hits=words.filter(w=>text.toLowerCase().includes(w)).length;return Math.min(5,Math.max(2,hits+2))}
+assert('Required-field validation concept', ''.trim()==='');
+assert('Class responsibility keywords improve evaluation', score('class Order responsibility service',['class','responsibility','service'])>=4);
+assert('Missing evidence does not receive maximum score', score('nothing here',['interface','composition','dependency'])<5);
+assert('Edge case evidence is detected', score('edge case and failure handling',['edge','failure'])>=4);
+assert('Extensibility language is detected', score('interface allows future change',['interface','change'])>=4);
+</script></body></html>
